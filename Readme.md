@@ -12,4 +12,8 @@ https://ollama.com/library/llama3-groq-tool-use
 
 https://wow.groq.com/introducing-llama-3-groq-tool-use-models/
 
+## Github
+
+https://github.com/langchain-ai/langgraph/blob/main/examples/tutorials/tool-calling-agent-local.ipynb
+
 
