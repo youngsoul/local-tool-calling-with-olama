@@ -12,7 +12,7 @@ from langchain_openai import ChatOpenAI
 from langchain_community.embeddings.ollama import OllamaEmbeddings
 embeddings = OllamaEmbeddings(model='nomic-embed-text')
 
-def get_chat_model(type: Literal["gemma", "llama", "openai", "internlm2"] = "llama") -> BaseChatModel:
+def get_chat_model(type: Literal["gemma", "llama", "llama31", "openai", "internlm2"] = "llama") -> BaseChatModel:
     if type == "gemma":
         return ChatOllama(model="gemma2")
     elif type == "llama":
@@ -21,6 +21,8 @@ def get_chat_model(type: Literal["gemma", "llama", "openai", "internlm2"] = "lla
         return ChatOpenAI()
     elif type == "internlm2":
         return ChatOllama(model="internlm2")
+    elif type == "llama31":
+        return ChatOllama(model="llama3.1")
 
 
 # llm = get_chat_model("llama")
